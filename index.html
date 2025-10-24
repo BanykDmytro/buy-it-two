@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyIT</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        .main-hero {
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 1%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .title {
+            font-size: 3.5em;
+            color: green;
+        }
+        .categories {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 75px;
+        }
+        .clothes, .technique {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            border: 2px solid #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .prgrh {
+            font-size: 1.6em;
+            color: green;
+        }
+        .clothes:hover, .technique:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 90%;
+            text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+        .logo {
+            display: none;
+        }
+        .title {
+            font-size: 2.2em;
+            white-space: nowrap;
+        }
+        .categories {
+            flex-direction: column;
+            gap: 30px;
+        }
+        .clothes, .technique {
+            width: 80%;
+            height: auto;
+        }
+        .clothes img, .technique img {
+            width: 100%;
+            height: auto;
+        }
+        .prgrh {
+            font-size: 1.3em;
+        }
+        footer {
+            top: 110%;
+        }
+    }
+    </style>
+
+    <section class="header">
+        <div class="header-logo">
+            <img class="logo" src="img/logo.jpg" width="100" height="100">
+        </div>
+    </section>
+    <section class="hero">
+        <div class="main-hero">
+            <h2 class="title">BuyIT - quickly!</h2>
+            <div class="categories">
+                <a href="technique/index.html">
+                <div class="technique">
+                    <p class="prgrh">Technique</p>
+                    <img src="img/iPhone.jpg" width="250" height="250">
+                </div>
+                </a>
+                <a href="clothes/index.html">
+                <div class="clothes">
+                    <p class="prgrh">Clothes</p>
+                    <img src="img/clothes.jpg" width="250" height="250">
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        Got questions? Contact us at:<br>+1 123 456 7890
+    </footer>
+</body>
+</html>
