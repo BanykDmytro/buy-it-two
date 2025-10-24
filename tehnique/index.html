@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <title>BuyIT - Technique</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-section img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+    }
+
+    .title {
+      color: green;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      color: white;
+      background: green;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      padding: 10px 15px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: rgb(0, 120, 0);
+      transform: scale(1.05);
+    }
+
+    /* ---------- MAIN ---------- */
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 280px;
+      height: 420px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .c-name {
+      font-size: 1.1em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .price p {
+      margin: 0;
+      font-size: 1.1em;
+    }
+
+    .price .btn {
+      padding: 8px 12px;
+      font-size: 0.9em;
+    }
+
+    @media screen and (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="img/logo.jpg" alt="logo" />
+      <h1 class="title">BuyIT - Technique</h1>
+    </div>
+
+    <div class="header-buttons">
+      <button class="btn" id="go-home">Go Home</button>
+      <button class="btn" id="see-cart">
+        <i class="fa-solid fa-cart-shopping"></i> Cart
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-container">
+      <div class="card" data-name="iPhone 16 Pro" data-price="999" data-img="img/i-one.png">
+        <img src="img/i-one.png" alt="iPhone 16 Pro" />
+        <p class="c-name">iPhone 16 Pro</p>
+        <div class="price">
+          <p>$999</p>
+          <button class="btn add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+
+      <div class="card" data-name="Samsung S25 Ultra" data-price="1099" data-img="img/s25.png">
+        <img src="img/s25.png" alt="Samsung S25 Ultra" />
+        <p class="c-name">Samsung S25 Ultra</p>
+        <div class="price">
+          <p>$1099</p>
+          <button class="btn add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+
+      <div class="card" data-name="Google Pixel 9 Pro" data-price="799" data-img="img/p9.png">
+        <img src="img/p9.png" alt="Google Pixel 9 Pro" />
+        <p class="c-name">Google Pixel 9 Pro</p>
+        <div class="price">
+          <p>$799</p>
+          <button class="btn add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+
+      <div class="card" data-name="Redmi Note 14" data-price="149" data-img="img/note14.png">
+        <img src="img/note14.png" alt="Redmi Note 14" />
+        <p class="c-name">Redmi Note 14</p>
+        <div class="price">
+          <p>$149</p>
+          <button class="btn add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+
+      <div class="card" data-name="Poco X7 Pro" data-price="299" data-img="img/px7pro.png">
+        <img src="img/px7pro.png" alt="Poco X7 Pro" />
+        <p class="c-name">Poco X7 Pro</p>
+        <div class="price">
+          <p>$299</p>
+          <button class="btn add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+
+      <div class="card" data-name="Xiaomi 15T" data-price="799" data-img="img/x15t.png">
+        <img src="img/x15t.png" alt="Xiaomi 15T" />
+        <p class="c-name">Xiaomi 15T</p>
+        <div class="price">
+          <p>$799</p>
+          <button class="btn add-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let cart = [];
+
+    document.getElementById("see-cart").addEventListener("click", () => {
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+      window.location.href = "cart/index.html";
+    });
+
+    document.getElementById("go-home").addEventListener("click", () => {
+      window.location.href = "../index.html";
+    });
+
+    document.querySelectorAll(".add-cart").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const card = e.target.closest(".card");
+        const name = card.dataset.name;
+        const price = card.dataset.price;
+        const img = card.dataset.img;
+
+        if (cart.some((item) => item.name === name)) {
+          alert("This item is already in the cart");
+          return;
+        }
+
+        cart.push({ name, price, img });
+        alert("This item has been added to the cart");
+      });
+    });
+  </script>
+</body>
+</html>
